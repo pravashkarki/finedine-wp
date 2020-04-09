@@ -429,21 +429,13 @@ function finedine_theme_info_page() {
 		<?php if ( $sm_theme_tab == 'demo-data-importer' ) { ?>
 			<div class="demo-import-box info-tab-content">
 				<?php
-		if (  class_exists( 'OCDI_Plugin' ) ) {
-			echo  __( '<a href="https://wordpress.org/plugins/one-click-demo-import/"  target="_blank">One Click Demo Import</a> Plugin has already been installed and activated.', 'finedine' );
-		}else{
-		    echo wp_kses( __( 'Install <a href="https://wordpress.org/plugins/one-click-demo-import/"  target="_blank">One Click Demo Import</a>
-plugin and activate it to import demo content. Demo data are bundled within the theme, Please make sure plugin is installed and activated. After plugin activation,
-go to Import Demo Data menu under Appearance and import it.', 'finedine' ),
-					array(
-						'a' => array(
-							'class'  => array(),
-							'target' => array(),
-							'href'   => array(),
-						),
-					)
-				);
-		}
+					if (  class_exists( 'OCDI_Plugin' ) ) {
+						echo  '<p>' . __( 'One Click Demo Import plugin has already been installed and activated.', 'finedine' ) . '</p>';
+						echo  '<p>' . sprintf( __( 'Go to %1$sImport Demo Data%2$s to import demo content.', 'finedine' ), '<a href="' . esc_url( admin_url( '/themes.php?page=pt-one-click-demo-import' ) ) . '">', '</a>' ). '</p>';
+					}else{
+						echo  '<p>' . sprintf( __( 'Install %1$sOne Click Demo Import%2$s plugin and activate it to import demo content. You can download demo content file from following link. Please make sure plugin is installed and activated. After plugin activation, go to Import Demo Data menu under Appearance and import it.', 'finedine' ), '<a href="' . esc_url( admin_url( '/themes.php?page=tgmpa-install-plugins' ) ) . '">', '</a>' ). '</p>';
+						echo  '<p><a href="https://www.sampression.com/themes/finedine/" target="_blank">' . esc_html__( 'Download Demo Content', 'finedine' ) . '</a></p>';
+					}
 				?>
 			</div>
 		<?php } ?>
