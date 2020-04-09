@@ -1,22 +1,19 @@
-====== Finedine ======
+=== Finedine ===
 
-Theme Name: Finedine
-Theme URI: https://sampression.com/themes/finedine
-Author: Sampression
-Author URI: https://www.sampression.com
-Requires at least: WordPress 4.7
-Tested up to: WordPress 4.9.8
-Version 1.0.2
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce, food-and-drink
-*/
+Contributors: sampression
+Requires at least: 5.2
+Requires PHP: 5.6.20
+Tested up to: 5.4
+Stable tag: 1.0.2
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
+== Description ==
 
-=== Theme Description ===
 Finedine is the perfect theme for hospitality and food websites. If you are building websites for restaurants, barbecues, grill houses, fast food, pizzerias, resorts, hotels and more, this will be the perfect theme for you. Finedine is compatible with the latest version of WooCommerce and also features full-width featured slider, call for action block, reviews and awards slider and much more.
 
-=== Installation ===
+== Installation ==
+
 1. Primary:
  = Log in to your WordPress dashboard and go to Appearance > Themes.
  = Click on Add New button at the top of the page. Search for "Finedine" in the search box and download the theme from the results shown.
@@ -33,12 +30,12 @@ Finedine is the perfect theme for hospitality and food websites. If you are buil
 4. Now click on "Finedine" to activate the theme.
 
 
-=== Frequently Asked Questions ===
+== Frequently Asked Questions ==
 
 - How to change the copyright message in the footer?
 Finedine is a free theme, so the theme designer's copyright information is needed. You can change it by copying footer.php from the parent theme to your child theme folder and edit it. This way the changes you make will not be replaced during the future updates to the theme.
 
-=== Copyright & License ===
+== Copyright & License ==
 
  = Finedine, Copyright 2018 Sampression.com
  = Finedine is distributed under the terms of the GNU GPL.
@@ -56,7 +53,7 @@ Version 1.0.1
  = Fixed : Demo url updated.
 
 
-=== Credits ===
+== Credits ==
 Findine bundles the following third-party resources:
 
 HTML5 Shiv, Copyright 2014 Alexander Farkas
