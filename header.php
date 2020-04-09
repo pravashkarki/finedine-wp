@@ -82,16 +82,14 @@
 				) );
 				?>
 			</nav><!-- #site-navigation -->
-			<div class="social-connect">
-				<span><?php esc_html_e( 'Follow', 'finedine' ); ?></span>
 
-				<?php
-				if ( finedine_get_option( 'finedine_socials_facebook' ) || finedine_get_option( 'finedine_socials_twitter' ) || finedine_get_option( 'finedine_socials_instagram' ) || finedine_get_option( 'finedine_socials_youtube' )
-				) {
-					finedine_social_media_icons();
-				}
-				?>
-			</div><!-- .social-connect -->
+			<?php if (  finedine_get_option( 'finedine_socials_facebook' ) || finedine_get_option( 'finedine_socials_twitter' ) || finedine_get_option( 'finedine_socials_instagram' ) || finedine_get_option( 'finedine_socials_youtube' )
+				  ) : ?>
+				<div class="social-connect">
+					<span><?php esc_html_e( 'Follow', 'finedine' ); ?></span>
+					<?php finedine_social_media_icons(); ?>
+				</div><!-- .social-connect -->
+			<?php endif; ?>
 
 			<span class="copyright">
 				<?php
