@@ -120,7 +120,9 @@ function finedine_load_scripts() {
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'finedine-fonts', finedine_fonts_url(), array(), null );
 
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.css' );
+	// wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.css' );
+	wp_enqueue_style( 'fontawesome', esc_url( get_template_directory_uri() ) . '/customizer/css/fontawesome.css', false, 'all' );
+
 
 	wp_enqueue_style( 'finedine-style', get_stylesheet_uri() );
 

@@ -31,7 +31,7 @@ function finedine_sidebar_position() {
  */
 function finedine_sidebar_class() {
 	// Get the sidebar output from function.
-	echo esc_html( finedine_sidebar_position() );
+	echo esc_attr( finedine_sidebar_position() );
 }
 
 
