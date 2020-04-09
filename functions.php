@@ -157,6 +157,7 @@ function finedine_load_admin_script_style( $hook ) {
 		wp_enqueue_media();
 		wp_enqueue_script( 'finedine-customizer-image-upload-script', get_template_directory_uri() . '/assets/admin/js/image_upload_widget.js', false, '1.0', true );
 		wp_register_script( 'finedine-widget-script', get_template_directory_uri() . '/customizer/js/finedine-widget-script.js', array('jquery', 'customize-controls'), false, true );
+		wp_enqueue_style( 'finedine-widget-style', get_template_directory_uri() . '/assets/admin/css/widgets.css' );
 	}
 }
 

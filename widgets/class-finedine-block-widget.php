@@ -48,12 +48,11 @@ if ( ! class_exists( 'Finedine_Block_Widget' ) ) :
 			$sm_button_text_url = ! empty( $instance['sm_button_text_url'] ) ? ( $instance['sm_button_text_url'] ) : '';
 			$image_uri          = ! empty( $instance['image_uri'] ) ? ( $instance['image_uri'] ) : '';
 			$block_type         = ! empty( $instance['block_type'] ) ? ( $instance['block_type'] ) : '';
-			$sm_button_link     = ! empty( $instance['sm_button_link'] ) ? ( $instance['sm_button_link'] ) : '';
 			$subtitle           = ! empty( $instance['subtitle'] ) ? ( $instance['subtitle'] ) : '';
 
 			echo $args['before_widget'];
-
 			?>
+
 			<?php if ( 'featured' === $block_type ) { ?>
                 <section class="widget widget-featured-block clearfix ">
                     <div class="layout-style1">
@@ -72,7 +71,7 @@ if ( ! class_exists( 'Finedine_Block_Widget' ) ) :
 									<?php
 									if ( ! empty( $title ) ) {
 										?>
-                                        <h1><?php echo esc_attr( $title ); ?></h1>
+                                        <h1><?php echo esc_html( $title ); ?></h1>
 										<?php
 									}
 									?>
@@ -161,7 +160,7 @@ if ( ! class_exists( 'Finedine_Block_Widget' ) ) :
 										<?php if ( ! empty( $subtitle ) ) { ?>
                                             <h2 class="section-heading wow fadeInUp"><?php echo esc_html( $subtitle ); ?></h2><?php } ?>
 										<?php if ( ! empty( $sm_button_text ) ) { ?>
-                                            <a href="<?php echo esc_url( $sm_button_link ); ?>"
+                                            <a href="<?php echo esc_url( $sm_button_text_url ); ?>"
                                                class="btn btn-tertiary wow fadeInUp"><?php echo esc_attr( $sm_button_text ); ?></a><?php } ?>
                                     </div><!-- .col-md-12 -->
                                 </div><!-- .row -->
@@ -205,8 +204,6 @@ if ( ! class_exists( 'Finedine_Block_Widget' ) ) :
 
 			$instance['block_type'] = sanitize_text_field( $new_instance['block_type'] );
 
-			$instance['sm_button_link'] = esc_url_raw( $new_instance['sm_button_link'] );
-
 			$instance['subtitle'] = sanitize_text_field( $new_instance['subtitle'] );
 
 			return $instance;
@@ -225,9 +222,9 @@ if ( ! class_exists( 'Finedine_Block_Widget' ) ) :
 			$title          = ! empty( $instance['title'] ) ? ( $instance['title'] ) : '';
 			$subtitle       = ! empty( $instance['descriptions'] ) ? ( $instance['descriptions'] ) : '';
 			$sm_button_text = ! empty( $instance['sm_button_text'] ) ? ( $instance['sm_button_text'] ) : '';
-			$sm_button_link = ! empty( $instance['sm_button_link'] ) ? ( $instance['sm_button_link'] ) : '';
 			$image_uri      = ! empty( $instance['image_uri'] ) ? ( $instance['image_uri'] ) : '';
 			$block_type     = ! empty( $instance['block_type'] ) ? ( $instance['block_type'] ) : '';
+			$image_align    = ! empty( $instance['image_align'] ) ? ( $instance['image_align'] ) : '';
 			?>
             <p>
                 <label for="<?php echo esc_attr( $this->get_field_id( 'block_type' ) ); ?>">
@@ -240,18 +237,9 @@ if ( ! class_exists( 'Finedine_Block_Widget' ) ) :
             </p>
             <p>
                 <select class="block-type" id="<?php echo esc_attr( $this->get_field_id( 'block_type' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'block_type' ) ); ?>">
-					<?php if ( $instance['block_type'] == "cfa" || $instance['block_type'] == "featured" ) { ?>
-                        <option value="<?php echo esc_attr( $instance['block_type'] ); ?>"><?php echo esc_attr( $instance['block_type'] ); ?></option>
-					<?php } ?>
-					<?php if ( $instance['block_type'] == "cfa" ) { ?>
-                        <option value="featured"><?php esc_html_e( 'Featured','finedine' ); ?></option>
-					<?php } elseif ( $instance['block_type'] == "featured" ) { ?>
-                        <option value="cfa"><?php esc_html_e( 'Call For Action', 'finedine' ); ?></option>
-					<?php } else { ?>
-                        <option value=""><?php esc_html_e( 'Select Block Type', 'finedine' ); ?></option>
-                        <option value="featured"><?php esc_html_e( 'Featured', 'finedine' ); ?></option>
-                        <option value="cfa"><?php esc_html_e( 'Call For Action', 'finedine' ); ?></option>
-					<?php } ?>
+					<option value=""><?php esc_html_e( 'Select Block Type', 'finedine' ); ?></option>
+					<option value="featured" <?php selected( $block_type, 'featured' ); ?>><?php esc_html_e( 'Featured', 'finedine' ); ?></option>
+					<option value="cfa" <?php selected( $block_type, 'cfa' ); ?>><?php esc_html_e( 'Call For Action', 'finedine' ); ?></option>
                 </select>
             </p>
             <p>
@@ -303,35 +291,21 @@ if ( ! class_exists( 'Finedine_Block_Widget' ) ) :
             <p class="feature-wid">
                 <label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"><?php esc_html_e( 'Short Description:',
 						'finedine' ); ?></label>
-                <input class="widefat"
+                <input type="text" class="widefat"
                        id="<?php echo esc_html( $this->get_field_id( 'description' ) ); ?>"
                        name="<?php echo esc_attr( $this->get_field_name( 'description' ) ); ?>"
                        value="<?php if ( ! empty( $instance['description'] ) ) {
-					       echo esc_html( $instance['description'] );
+					       echo esc_attr( $instance['description'] );
 				       } ?>">
             </p>
             <p class="feature-wid">
-                <label for="<?php echo esc_attr( $this->get_field_id( 'image_align' ) ); ?>"><?php esc_html_e( 'Image Alignment.',
-						'finedine' ); ?></label>
+                <label for="<?php echo esc_attr( $this->get_field_id( 'image_align' ) ); ?>"><?php esc_html_e( 'Image Alignment:', 'finedine' ); ?></label>
+				<select class="feature"id="<?php echo esc_attr( $this->get_field_id( 'image_align' ) ); ?>"name="<?php echo esc_attr( $this->get_field_name( 'image_align' ) ); ?>">
+					<option value="right" <?php selected( $image_align, 'right' ); ?>><?php esc_html_e( 'Right', 'finedine' ); ?></option>
+					<option value="left" <?php selected( $image_align, 'left' ); ?>><?php esc_html_e( 'Left', 'finedine' ); ?></option>
+				</select>
             </p>
-            <p class="feature-wid">
-                <select class="feature"
-                        id="<?php echo esc_attr( $this->get_field_id( 'image_align' ) ); ?>"
-                        name="<?php echo esc_attr( $this->get_field_name( 'image_align' ) ); ?>">
-					<?php if ( $instance['image_align'] == "left" || $instance['image_align'] == "right"
-					) { ?>
-                        <option value="<?php echo esc_attr( $instance['image_align'] ); ?>"><?php echo esc_attr( $instance['image_align'] ); ?></option>
-					<?php } ?>
-					<?php if ( $instance['image_align'] == "left" ) { ?>
-                        <option value="right"><?php esc_html_e( 'Right', 'finedine' ); ?></option>
-					<?php } elseif ( $instance['image_align'] == "right" ) { ?>
-                        <option value="left"><?php esc_html_e( 'Left', 'finedine' ); ?></option>
-					<?php } else { ?>
-                        <option value="right"><?php esc_html_e( 'Right', 'finedine' ); ?></option>
-                        <option value="left"><?php esc_html_e( 'Left', 'finedine' ); ?></option>
-					<?php } ?>
-                </select>
-            </p>
+
             <p>
                 <label for="<?php echo esc_attr( $this->get_field_id( 'sm_button_text' ) ); ?>"><?php esc_html_e( 'Button Text',
 						'finedine' ); ?></label>
