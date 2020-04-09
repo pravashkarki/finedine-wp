@@ -1,12 +1,12 @@
 ====== Finedine ======
 
-Theme Name: Finedine 
+Theme Name: Finedine
 Theme URI: https://sampression.com/themes/finedine
 Author: Sampression
 Author URI: https://www.sampression.com
 Requires at least: WordPress 4.7
 Tested up to: WordPress 4.9.8
-Version 1.0.1
+Version 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce, food-and-drink
@@ -27,16 +27,16 @@ Finedine is the perfect theme for hospitality and food websites. If you are buil
  = Unzip the template file (finedine.1.0.zip) that you have downloaded.
  = Upload the entire folder (finedine) to your server via FTP and place it in the /wp-content/themes/ folder.
  = Do not change the directory name.
- = The template files should be there now: /wp-content/themes/finedine/index.php (example). 
- 
+ = The template files should be there now: /wp-content/themes/finedine/index.php (example).
+
 3. Log into your WP admin panel and click on "Appearance". Go to "Themes" tab.
 4. Now click on "Finedine" to activate the theme.
 
- 
-=== Frequently Asked Questions === 
 
-- How to change the copyright message in the footer? 
-Finedine is a free theme, so the theme designer's copyright information is needed. You can change it by copying footer.php from the parent theme to your child theme folder and edit it. This way the changes you make will not be replaced during the future updates to the theme. 
+=== Frequently Asked Questions ===
+
+- How to change the copyright message in the footer?
+Finedine is a free theme, so the theme designer's copyright information is needed. You can change it by copying footer.php from the parent theme to your child theme folder and edit it. This way the changes you make will not be replaced during the future updates to the theme.
 
 === Copyright & License ===
 
@@ -44,6 +44,9 @@ Finedine is a free theme, so the theme designer's copyright information is neede
  = Finedine is distributed under the terms of the GNU GPL.
 
 == Changelog ==
+Version 1.0.2
+ = Fixed : Minor bug fixes
+
 Version 1.0.1
  = Fixed : Image link in the home page.
  = Fixed : Escaping for HTML with blog text.
