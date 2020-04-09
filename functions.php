@@ -147,21 +147,17 @@ add_action( 'wp_enqueue_scripts', 'finedine_load_scripts' );
 /**
  * Enqueue admin scripts and styles.
  */
-function finedine_load_admin_script_style() {
+function finedine_load_admin_script_style( $hook ) {
+	if ( 'appearance_page_sm_finedine' === $hook ) {
+		wp_enqueue_style( 'finedine-custom-admin', get_template_directory_uri() . '/assets/admin/css/custom-admin.css', array(), null );
+		wp_enqueue_script( 'finedine-custom-admin', get_template_directory_uri() . '/assets/admin/js/custom-admin.js', array( 'jquery' ), '2.2.1', true );
+	}
 
-	wp_enqueue_style( 'finedine-custom-admin', get_template_directory_uri() . '/assets/admin/css/custom-admin.css', array(), null );
-
-	wp_enqueue_script( 'finedine-custom-admin', get_template_directory_uri() . '/assets/admin/js/custom-admin.js', array( 'jquery' ), '2.2.1', true );
-
-	wp_enqueue_media();
-
-	wp_enqueue_script( 'finedine-customizer-image-upload-script', get_template_directory_uri() . '/assets/admin/js/image_upload_widget.js', false, '1.0', true );
-
-	wp_register_script( 'finedine-widget-script', get_template_directory_uri() . '/customizer/js/finedine-widget-script.js', array(
-		'jquery',
-		'customize-controls'
-	), false, true );
-
+	if ( 'widgets.php' === $hook ) {
+		wp_enqueue_media();
+		wp_enqueue_script( 'finedine-customizer-image-upload-script', get_template_directory_uri() . '/assets/admin/js/image_upload_widget.js', false, '1.0', true );
+		wp_register_script( 'finedine-widget-script', get_template_directory_uri() . '/customizer/js/finedine-widget-script.js', array('jquery', 'customize-controls'), false, true );
+	}
 }
 
 add_action( 'admin_enqueue_scripts', 'finedine_load_admin_script_style' );
