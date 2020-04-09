@@ -299,16 +299,6 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
-
-/**
- * Registers an editor stylesheet for the theme.
- */
-function finedine_theme_add_editor_styles() {
-	add_editor_style( 'custom-editor-style.css' );
-}
-
-add_action( 'admin_init', 'finedine_theme_add_editor_styles' );
-
 /**
  * Demo class
  */
