@@ -120,9 +120,7 @@ function finedine_load_scripts() {
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'finedine-fonts', finedine_fonts_url(), array(), null );
 
-	// wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.css' );
-	wp_enqueue_style( 'fontawesome', esc_url( get_template_directory_uri() ) . '/customizer/css/fontawesome.css', false, 'all' );
-
+	wp_enqueue_style( 'finedine-font-awesome', esc_url( get_template_directory_uri() ) . '/customizer/css/fontawesome.css', false, 'all' );
 
 	wp_enqueue_style( 'finedine-style', get_stylesheet_uri() );
 
@@ -170,13 +168,13 @@ add_action( 'admin_enqueue_scripts', 'finedine_load_admin_script_style' );
  *
  */
 function finedine_load_script() {
-
 	wp_register_script( 'finedine-slider-option', get_template_directory_uri() . '/assets/js/slider_option.js', array( 'jquery' ), '1.0.2', true );
 
 	global $finedine_settings, $finedine_array_of_default_settings;
 	$finedine_settings = wp_parse_args( get_option( 'finedine_theme_settings', array() ), finedine_get_option_defaults() );
 
-	$animation        = ( isset( $finedine_settings['transition_effects'] ) ) ? $finedine_settings['transition_effects'] : '';
+	$animation = ( isset( $finedine_settings['transition_effects'] ) ) ? $finedine_settings['transition_effects'] : '';
+
 	$animation_effect = '';
 
 	if ( '1' === $animation ) {
@@ -187,8 +185,8 @@ function finedine_load_script() {
 	);
 
 	wp_localize_script( 'finedine-slider-option', 'finedine_hero_slider', $translation_array );
-	wp_enqueue_script( 'finedine-slider-option' );
 
+	wp_enqueue_script( 'finedine-slider-option' );
 }
 
 add_action( 'wp_enqueue_scripts', 'finedine_load_script' );

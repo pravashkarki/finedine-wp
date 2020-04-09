@@ -102,14 +102,3 @@ function finedine_customize_register_social( $wp_customize ) {
 }
 
 add_action( 'customize_register', 'finedine_customize_register_social' );
-
-/**
- * Enqueue Style for fontawesome.
- */
-function finedine_customize_fontawesome_style() {
-
-	wp_enqueue_style( 'fontawesome', esc_url( get_template_directory_uri() ) . '/customizer/css/fontawesome.css', false, 'all' );
-
-}
-
-add_action( 'init', 'finedine_customize_fontawesome_style' );
