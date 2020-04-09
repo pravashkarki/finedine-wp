@@ -168,7 +168,7 @@ add_action( 'admin_enqueue_scripts', 'finedine_load_admin_script_style' );
  */
 function finedine_load_script() {
 
-	wp_register_script( 'finedine-slider-option', get_template_directory_uri() . '/assets/js/slider_option.js', array( 'jquery' ), '1.0.0', true );
+	wp_register_script( 'finedine-slider-option', get_template_directory_uri() . '/assets/js/slider_option.js', array( 'jquery' ), '1.0.2', true );
 
 	global $finedine_settings, $finedine_array_of_default_settings;
 	$finedine_settings = wp_parse_args( get_option( 'finedine_theme_settings', array() ), finedine_get_option_defaults() );
@@ -183,7 +183,7 @@ function finedine_load_script() {
 		'hero_slider_animation' => $animation_effect,
 	);
 
-	wp_localize_script( 'finedine-slider-option', 'hero_slider', $translation_array );
+	wp_localize_script( 'finedine-slider-option', 'finedine_hero_slider', $translation_array );
 	wp_enqueue_script( 'finedine-slider-option' );
 
 }

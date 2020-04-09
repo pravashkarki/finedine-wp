@@ -8,8 +8,8 @@
             dots : true,
             pause : 6000,
             //animateOut: 'slideOutDown',
-            animateOut: hero_slider.hero_slider_animation,
+            animateOut: finedine_hero_slider.hero_slider_animation,
             mouseDrag  : false
         });
     }
- });    
+ });
