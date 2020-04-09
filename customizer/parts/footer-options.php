@@ -159,7 +159,7 @@ function finedine_customize_register_footer( $wp_customize ) {
 		array(
 			'capability'        => 'manage_options',
 			'type'              => 'option',
-			'sanitize_callback' => 'finedine_sanitize_text',
+			'sanitize_callback' => 'sanitize_email',
 			'default'           => '',
 		)
 	);

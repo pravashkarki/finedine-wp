@@ -97,7 +97,7 @@ function finedine_customize_register_header( $wp_customize ) {
 		array(
 			'capability'        => 'manage_options',
 			'type'              => 'option',
-			'sanitize_callback' => 'finedine_sanitize_text',
+			'sanitize_callback' => 'esc_url_raw',
 			'default'           => $defaults['finedine_header_reservation_url'],
 		)
 	);

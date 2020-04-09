@@ -26,7 +26,7 @@ function finedine_customize_register_social( $wp_customize ) {
 		array(
 			'type'              => 'option',
 			'capability'        => 'manage_options',
-			'sanitize_callback' => 'finedine_sanitize_text',
+			'sanitize_callback' => 'esc_url_raw',
 			'default'           => $defaults['finedine_socials_facebook'],
 
 		)
@@ -46,7 +46,7 @@ function finedine_customize_register_social( $wp_customize ) {
 		array(
 			'type'              => 'option',
 			'capability'        => 'manage_options',
-			'sanitize_callback' => 'finedine_sanitize_text',
+			'sanitize_callback' => 'esc_url_raw',
 			'default'           => $defaults['finedine_socials_twitter'],
 		)
 	);
@@ -65,7 +65,7 @@ function finedine_customize_register_social( $wp_customize ) {
 		array(
 			'type'              => 'option',
 			'capability'        => 'manage_options',
-			'sanitize_callback' => 'finedine_sanitize_text',
+			'sanitize_callback' => 'esc_url_raw',
 			'default'           => $defaults['finedine_socials_youtube'],
 		)
 	);
@@ -82,7 +82,7 @@ function finedine_customize_register_social( $wp_customize ) {
 	// instagram URL - Setting.
 	$wp_customize->add_setting( 'finedine_theme_settings[finedine_socials_instagram]',
 		array(
-			'sanitize_callback' => 'finedine_sanitize_text',
+			'sanitize_callback' => 'esc_url_raw',
 			'type'              => 'option',
 			'capability'        => 'manage_options',
 			'default'           => $defaults['finedine_socials_instagram'],

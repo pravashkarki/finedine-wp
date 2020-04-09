@@ -24,15 +24,13 @@ function finedine_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name'     => esc_html__( 'Contact Form 7', 'finedine' ),
-			'slug'     => 'contact-form-7',
-			'required' => false,
+			'name' => esc_html__( 'Contact Form 7', 'finedine' ),
+			'slug' => 'contact-form-7',
 		),
 
 		array(
-			'name'     => esc_html__( 'One click demo import', 'finedine' ),
-			'slug'     => 'one-click-demo-import',
-			'required' => false,
+			'name' => esc_html__( 'One click demo import', 'finedine' ),
+			'slug' => 'one-click-demo-import',
 		),
 	);
 	tgmpa( $plugins );
