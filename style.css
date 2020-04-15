@@ -5510,6 +5510,10 @@ a:hover, a:active {
   padding-left: 0;
 }
 
+.main-navigation .menu{
+  padding: 1px;
+}
+
 .main-navigation ul ul {
   float: left;
   position: absolute;
@@ -5812,15 +5816,17 @@ a:hover, a:active {
   cursor: pointer;
   position: fixed;
   top: 10px;
-  left: 4px;
+  left: 8px;
   z-index: 12;
-  width: 53px;
+  width: 40px;
   height: 35px;
-  padding-left: 10px;
+  padding: 5px;
+  background: none;
+  margin-top: 0;
 }
 
 .logged-in .site-header > .slideout-menu-toggle {
-  top: 42px;
+  top: 40px;
 }
 
 .customize-partial-edit-shortcuts-shown .site-header > .slideout-menu-toggle {
@@ -5834,9 +5840,9 @@ a:hover, a:active {
 /* Icon 1 */
 #lines {
   width: 30px;
-  height: 30px;
+  height: 20px;
   position: relative;
-  margin: 6px 0 0;
+  margin: 0;
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
       transform: rotate(0deg);
@@ -5887,7 +5893,7 @@ a:hover, a:active {
   -ms-transform: rotate(42deg);
       transform: rotate(42deg);
   top: -1px;
-  left: 8px;
+  left: 4px;
 }
 
 .hide-on #lines span:nth-child(2) {
@@ -5900,7 +5906,7 @@ a:hover, a:active {
   -ms-transform: rotate(-42deg);
       transform: rotate(-42deg);
   top: 19px;
-  left: 8px;
+  left: 4px;
 }
 
 .slide-out .slideout-menu-toggle {
@@ -7591,7 +7597,7 @@ body {
     display: none;
   }
   .site-header > .slideout-menu-toggle.hide-on {
-    left: 0 !important;
+    left:8px !important;
     z-index: 13;
   }
   .header-bar {

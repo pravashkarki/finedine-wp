@@ -26,13 +26,14 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'finedine' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div href="#" class="slideout-menu-toggle<?php if ( is_front_page() ) { echo ' hide-on'; } ?>">
+		<button class="slideout-menu-toggle<?php if ( is_front_page() ) { echo ' hide-on'; } ?>">
+            <span class="screen-reader-text">Click to toggle navigation menu.</span>
 			<div id="lines">
 				<span></span>
 				<span></span>
 				<span></span>
 			</div>
-		</div>
+		</button>
 		<?php
 		$finedine_header_left_text        = ( ( null !== finedine_get_option( 'testimonial_slider_count' ) ) ) ? finedine_get_option( 'finedine_header_left_text' ) : '';
 		$finedine_header_middle_text      = ( ( null !== finedine_get_option( 'finedine_header_middle_text' ) ) ) ? finedine_get_option( 'finedine_header_middle_text' ) : '';

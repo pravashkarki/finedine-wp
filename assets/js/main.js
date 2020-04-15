@@ -17,7 +17,7 @@ jQuery(document).ready(function ($) {
 
             slideoutMenutoggle.animate({
                 left: "208px"
-            }, 350);
+            }, 100);
             $('.slideout-menu-toggle').addClass('hide-on');
             $("body").addClass("mobile-menu-active");
         } else {
@@ -29,8 +29,8 @@ jQuery(document).ready(function ($) {
             });
 
             slideoutMenutoggle.animate({
-                left: "4px"
-            }, 350);
+                left: "8px"
+            }, 100);
 
         }
     });
@@ -53,7 +53,7 @@ jQuery(document).ready(function ($) {
             });
 
             slideoutMenutoggle.animate({
-                left: "4px"
+                left: "8px"
             }, 350);
 
         }
