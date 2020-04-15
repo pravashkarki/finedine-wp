@@ -141,7 +141,7 @@ jQuery(document).ready(function ($) {
      * Navigation
      */
     if ($('.page_item_has_children').length > 0) {
-        $('.main-navigation li.page_item_has_children').prepend('<i class="sub-menu-toggle"></i>');
+        $('.main-navigation li.page_item_has_children > .sub-menu').before('<button class="sub-menu-toggle"><span class="screen-reader-text">Show sub menu</span></button>');
         $('.sub-menu-toggle').click(function (e) {
             // Prevent default behaviour
             e.preventDefault();
@@ -168,7 +168,7 @@ jQuery(document).ready(function ($) {
      * Fallback for menu
      */
     if ($('.menu-item-has-children ').length > 0) {
-        $('.main-navigation li.menu-item-has-children').prepend('<i class="sub-menu-toggle"></i>');
+        $('.main-navigation li.menu-item-has-children > .sub-menu').before('<button class="sub-menu-toggle"><span class="screen-reader-text">Show sub menu</span></button>');
         $('.sub-menu-toggle').click(function (e) {
             // Prevent default behaviour
             e.preventDefault();

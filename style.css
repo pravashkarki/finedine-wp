@@ -5390,7 +5390,6 @@ input[type="submit"] {
   margin-top: 10px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  outline: none;
 }
 
 button:hover,
@@ -5451,7 +5450,6 @@ input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
   color: #111;
-  outline: none;
 }
 
 select {
@@ -5650,8 +5648,13 @@ a:hover, a:active {
   z-index: 2;
   background: url(assets/images/menu-right-arrow.svg) no-repeat center center;
   cursor: pointer;
+  padding: 0;
+  margin-top: 0;
 }
-
+.sub-menu-toggle:focus,
+.sub-menu-toggle:hover{
+  background-color: transparent;
+}
 .sub-menu-toggle.menu-open {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -5790,6 +5793,7 @@ a:hover, a:active {
   z-index: 11;
   color: #fff;
   padding: 110px 0 185px;
+  min-height: 620px;
 }
 
 .contact-details-mobile {
