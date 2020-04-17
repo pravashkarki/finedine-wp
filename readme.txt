@@ -41,6 +41,11 @@ Finedine is a free theme, so the theme designer's copyright information is neede
  = Finedine is distributed under the terms of the GNU GPL.
 
 == Changelog ==
+Version 1.0.3
+ = Compatibility with WordPress 5.4
+ = Improve accessibility
+ = Minor CSS Tweaks
+
 Version 1.0.2
  = Fixed : Minor bug fixes
 
