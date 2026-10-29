@@ -109,7 +109,7 @@ if ( ! class_exists( 'Finedine_Block_Widget' ) ) :
 											<?php
 											if ( ! empty( $title ) ) {
 												?>
-                                                <h1><?php echo esc_attr( $title ); ?></h1>
+                                                <h1><?php echo esc_html( $title ); ?></h1>
 												<?php
 											}
 											?>
@@ -122,12 +122,12 @@ if ( ! class_exists( 'Finedine_Block_Widget' ) ) :
                                                 <div class="btn-group clearfix">
                                                     <a href="<?php
 													if ( ! empty( $sm_button_text_url ) ) {
-														echo esc_attr( $sm_button_text_url );
+														echo esc_url( $sm_button_text_url );
 													}
 													?>" class="btn btn-primary">
 														<?php
 														if ( ! empty( $sm_button_text ) ) {
-															echo esc_attr( $sm_button_text );
+															echo esc_html( $sm_button_text );
 														}
 														?>
                                                     </a>
@@ -151,7 +151,7 @@ if ( ! class_exists( 'Finedine_Block_Widget' ) ) :
 				if ( ! empty( $image_uri ) ) { ?>
                     <section class="widget widget-cfa clearfix">
                         <div class="layout-style2"
-                             style="background: url(<?php echo esc_url( $image_uri ); ?>?>) center center no-repeat; background-size: cover;">
+                             style="background: url(<?php echo esc_url( $image_uri ); ?>) center center no-repeat; background-size: cover;">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12 text-center">
@@ -161,7 +161,7 @@ if ( ! class_exists( 'Finedine_Block_Widget' ) ) :
                                             <h2 class="section-heading wow fadeInUp"><?php echo esc_html( $subtitle ); ?></h2><?php } ?>
 										<?php if ( ! empty( $sm_button_text ) ) { ?>
                                             <a href="<?php echo esc_url( $sm_button_text_url ); ?>"
-                                               class="btn btn-tertiary wow fadeInUp"><?php echo esc_attr( $sm_button_text ); ?></a><?php } ?>
+                                               class="btn btn-tertiary wow fadeInUp"><?php echo esc_html( $sm_button_text ); ?></a><?php } ?>
                                     </div><!-- .col-md-12 -->
                                 </div><!-- .row -->
                             </div><!-- .container -->

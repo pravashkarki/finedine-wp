@@ -2,9 +2,9 @@
 
 Contributors: sampression
 Requires at least: 5.2
-Requires PHP: 5.6.20
-Tested up to: 5.4
-Stable tag: 1.0.2
+Requires PHP: 5.6
+Tested up to: 7.1
+Stable tag: 1.0.4
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,13 @@ Finedine is a free theme, so the theme designer's copyright information is neede
  = Finedine is distributed under the terms of the GNU GPL.
 
 == Changelog ==
+Version 1.0.4
+ = Compatibility with WordPress 7.1
+ = Removed : HTML5 Shiv, a script only Internet Explorer 8 and older needed
+ = Removed : Unused vendor scripts
+ = Fixed : Escaping in the block widget and theme page
+ = Added : Responsive embeds
+
 Version 1.0.3
  = Compatibility with WordPress 5.4
  = Improve accessibility
@@ -60,10 +67,6 @@ Version 1.0.1
 
 == Credits ==
 Findine bundles the following third-party resources:
-
-HTML5 Shiv, Copyright 2014 Alexander Farkas
-Licenses: MIT/GPL2
-Source: https://github.com/aFarkas/html5shiv
 
 normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: MIT

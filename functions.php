@@ -26,6 +26,7 @@ if ( ! function_exists( 'finedine_setup' ) ) :
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
+		add_theme_support( 'responsive-embeds' );
 
 		/*
 		 * Let WordPress manage the document title.
@@ -123,9 +124,6 @@ function finedine_load_scripts() {
 	wp_enqueue_style( 'finedine-font-awesome', esc_url( get_template_directory_uri() ) . '/customizer/css/fontawesome.css', false, 'all' );
 
 	wp_enqueue_style( 'finedine-style', get_stylesheet_uri() );
-
-	// Load the html5 shiv.
-	wp_enqueue_script( 'html5', get_template_directory_uri() . '/assets/js/html5.js', array(), '3.7.3', true );
 
 	wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.js', array( 'jquery' ), '2.2.1', true );
 
