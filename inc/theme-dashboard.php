@@ -267,28 +267,14 @@ function finedine_theme_info_page() {
 							</p>
 						</div>
 						<div class="theme-link">
-							<h3><?php esc_html_e( 'Theme Documentation', 'finedine' ); ?></h3>
-							<p class="about">
-								<?php printf( esc_html__( 'Please visit our', 'finedine' ) ); ?>
-								<strong>
-									<a href="<?php echo esc_url( 'https://www.sampression.com/documentation-finedine/' ); ?>"
-									   target="_blank">
-										<?php printf( esc_html__( 'Documentation Section', 'finedine' ) ); ?></a>
-								</strong>
-								<?php printf( esc_html__( 'for any help on the setup  and configuration process.', 'finedine' ) ); ?>
-							<p>
-								<a href="<?php echo esc_url( 'https://www.sampression.com/documentation-finedine/' ); ?>"
-								   target="_blank"
-								   class="button button-secondary"><?php printf( esc_html__( 'Finedine Documentation', 'finedine' ) ); ?></a>
-							</p>
 							<?php do_action( 'finedine_dashboard_theme_links' ); ?>
 						</div>
 						<div class="theme-link">
 							<h3><?php esc_html_e( 'For Support', 'finedine' ); ?></h3>
-							<p class="about"><?php printf( esc_html__( 'We have an active community section where our members can share their experience and knowledge. Also our Sampression Moderator will be happy to answer your questions.', 'finedine' ), esc_html( $theme_data->Name ) ); ?></p>
+							<p class="about"><?php esc_html_e( 'Ask a question in the theme support forum on WordPress.org.', 'finedine' ); ?></p>
 							<p>
-								<a href="<?php echo esc_url( 'https://www.sampression.com/forums' ); ?>" target="_blank"
-								   class="button button-secondary"><?php echo sprintf( esc_html__( 'Visit Our Community Forum', 'finedine' ), esc_html( $theme_data->Name  )  ); ?></a>
+								<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/finedine/' ); ?>" target="_blank"
+								   class="button button-secondary"><?php esc_html_e( 'Visit the Support Forum', 'finedine' ); ?></a>
 							</p>
 						</div>
 					</div>
@@ -434,7 +420,6 @@ function finedine_theme_info_page() {
 						echo  '<p>' . sprintf( __( 'Go to %1$sImport Demo Data%2$s to import demo content.', 'finedine' ), '<a href="' . esc_url( admin_url( '/themes.php?page=pt-one-click-demo-import' ) ) . '">', '</a>' ). '</p>';
 					}else{
 						echo  '<p>' . sprintf( __( 'Install %1$sOne Click Demo Import%2$s plugin and activate it to import demo content. You can download demo content file from following link. Please make sure plugin is installed and activated. After plugin activation, go to Import Demo Data menu under Appearance and import it.', 'finedine' ), '<a href="' . esc_url( admin_url( '/themes.php?page=tgmpa-install-plugins' ) ) . '">', '</a>' ). '</p>';
-						echo  '<p><a href="https://www.sampression.com/themes/finedine/" target="_blank">' . esc_html__( 'Download Demo Content', 'finedine' ) . '</a></p>';
 					}
 				?>
 			</div>

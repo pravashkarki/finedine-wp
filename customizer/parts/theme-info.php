@@ -23,24 +23,12 @@ if ( ! function_exists( 'finedine_add_info_customizer' ) ) {
 				// Add Theme instruction, Support Forum, Demo Link, Rating Link.
 				$important_links = array(
 					'theme-info'    => array(
-						'link' => esc_url( 'https://www.sampression.com/themes/finedine/' ),
+						'link' => esc_url( 'https://wordpress.org/themes/finedine/' ),
 						'text' => esc_html__( 'Theme Info', 'finedine' ),
 					),
 					'support'       => array(
-						'link' => esc_url( 'https://www.sampression.com/support/' ),
+						'link' => esc_url( 'https://wordpress.org/support/theme/finedine/' ),
 						'text' => esc_html__( 'Support', 'finedine' ),
-					),
-					'documentation' => array(
-						'link' => esc_url( 'https://www.sampression.com/documentation-finedine/' ),
-						'text' => esc_html__( 'Documentation', 'finedine' ),
-					),
-					'demo'          => array(
-						'link' => esc_url( 'https://www.demo.sampression.com/finedine/' ),
-						'text' => esc_html__( 'Live Theme Demo', 'finedine' ),
-					),
-					'demo'          => array(
-						'link' => esc_url( 'https://www.sampression.com/forums/' ),
-						'text' => esc_html__( 'Community Forum', 'finedine' ),
 					),
 				);
 

@@ -47,6 +47,7 @@ Version 1.0.4
  = Removed : Unused vendor scripts
  = Fixed : Escaping in the block widget and theme page
  = Added : Responsive embeds
+ = Changed : Theme and support links point to WordPress.org; dead demo, documentation and forum links removed
 
 Version 1.0.3
  = Compatibility with WordPress 5.4
