@@ -280,7 +280,7 @@ function finedine_theme_info_page() {
 					</div>
 
 					<div class="theme-detail-right">
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.png" alt="<?php esc_attr_e( 'Theme Screenshot', 'finedine' ); ?>"/>
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.jpg" alt="<?php esc_attr_e( 'Theme Screenshot', 'finedine' ); ?>"/>
 					</div>
 				</div>
 			</div>

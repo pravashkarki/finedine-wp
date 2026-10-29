@@ -29,7 +29,7 @@ if ( ! empty( $slider_post[0] ) ) {
 					<?php
 					$featured_img_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
 					if ( empty( $featured_img_url ) ) {
-						$featured_img_url = get_template_directory_uri() . 'assets/images/hero1.png';
+						$featured_img_url = get_template_directory_uri() . '/assets/images/hero1.jpg';
 					}
 					?>
 					<div class="slide"

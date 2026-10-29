@@ -47,6 +47,9 @@ Version 1.0.4
  = Removed : Unused vendor scripts
  = Fixed : Escaping in the block widget and theme page
  = Added : Responsive embeds
+ = Changed : Hero and header images replaced with CC0 photos from the WordPress Photo Directory
+ = Fixed : Default image path in the restaurant template
+ = Changed : New screenshot, saved as screenshot.jpg
  = Changed : Theme and support links point to WordPress.org; dead demo, documentation and forum links removed
 
 Version 1.0.3
@@ -95,11 +98,11 @@ Google Fonts
 License: scripts.sil.org/OFL
 Source: https://fonts.google.com/specimen/Great+Vibes
 
-Pixabay Images
+Image used in the hero and the screenshot (assets/images/hero1.jpg), by Andrew Kedi
 License: CC0 1.0 Universal (CC0 1.0)
-Source: https://pixabay.com/en/abendbrot-restaurant-salad-eat-939435/
+Source: https://wordpress.org/photos/photo/6756a60bd4/
 
-Pixabay Images
+Image used in the custom header (assets/images/banner-image.jpg), by prakritee08
 License: CC0 1.0 Universal (CC0 1.0)
-Source: https://pixabay.com/en/restaurant-wine-glasses-served-449952/
+Source: https://wordpress.org/photos/photo/6246aacdad/
 
